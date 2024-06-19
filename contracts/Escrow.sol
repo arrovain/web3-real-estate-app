@@ -10,5 +10,8 @@ interface IERC721 {
 }
 
 contract Escrow {
-
+ address public nftAddress;
+    address payable public seller;
+    address public inspector;
+    address public lender;
 }
