@@ -17,5 +17,12 @@ describe("Escrow", () => {
         "https://ipfs.io/ipfs/QmTudSYeM7mz3PkYEWXWqPjomRPHogcMFSq7XAvsvsgAPS"
       );
     await transaction.wait();
+    const Escrow = await ethers.getContractFactory("Escrow");
+    escrow = await Escrow.deploy(
+      realEstate.address,
+      seller.address,
+      inspector.address,
+      lender.address
+    );
   });
 });
