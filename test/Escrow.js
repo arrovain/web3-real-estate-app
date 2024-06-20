@@ -119,5 +119,6 @@ describe("Escrow", () => {
             expect(await escrow.approval(1, seller.address)).to.be.equal(true)
             expect(await escrow.approval(1, lender.address)).to.be.equal(true)
         })
+        
   });
 });
