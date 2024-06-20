@@ -6,8 +6,6 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 
-async function main() {}
-
 async function main() {
   const [buyer, seller, inspector, lender] = await ethers.getSigners();
 
