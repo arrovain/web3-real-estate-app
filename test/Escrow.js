@@ -37,4 +37,25 @@ describe("Escrow", () => {
       .list(1, buyer.address, tokens(10), tokens(5));
     await transaction.wait();
   });
+  describe("Deployment", () => {
+    it("Returns NFT address", async () => {
+      const result = await escrow.nftAddress();
+      expect(result).to.be.equal(realEstate.address);
+    });
+
+    it("Returns seller", async () => {
+      const result = await escrow.seller();
+      expect(result).to.be.equal(seller.address);
+    });
+
+    it("Returns inspector", async () => {
+      const result = await escrow.inspector();
+      expect(result).to.be.equal(inspector.address);
+    });
+
+    it("Returns lender", async () => {
+      const result = await escrow.lender();
+      expect(result).to.be.equal(lender.address);
+    });
+  });
 });
