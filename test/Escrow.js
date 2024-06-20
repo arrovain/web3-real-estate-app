@@ -28,7 +28,13 @@ describe("Escrow", () => {
       inspector.address,
       lender.address
     );
+
     transaction = await realEstate.connect(seller).approve(escrow.address, 1);
+    await transaction.wait();
+
+    transaction = await escrow
+      .connect(seller)
+      .list(1, buyer.address, tokens(10), tokens(5));
     await transaction.wait();
   });
 });
