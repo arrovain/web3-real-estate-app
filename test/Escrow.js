@@ -8,5 +8,14 @@ const tokens = (n) => {
 describe("Escrow", () => {
   it("save the adresses", async () => {
     await ethers.getContractFactory("RealEstate");
+    const realEstate = await ethers.getContractFactory("RealEstate");
+    realEstate = await RealEstate.deploy();
+
+    let transaction = await realEstate
+      .connect(seller)
+      .mint(
+        "https://ipfs.io/ipfs/QmTudSYeM7mz3PkYEWXWqPjomRPHogcMFSq7XAvsvsgAPS"
+      );
+    await transaction.wait();
   });
 });
