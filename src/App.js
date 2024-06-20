@@ -53,6 +53,11 @@ function App() {
     useEffect(() => {
       loadBlockchainData();
     }, []);
+
+    const togglePop = (home) => {
+      setHome(home);
+      toggle ? setToggle(false) : setToggle(true);
+    };
   };
 
   return (
