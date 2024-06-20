@@ -1,10 +1,10 @@
-const { expect } = require('chai');
-const { ethers } = require('hardhat');
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
 
 const tokens = (n) => {
-    return ethers.utils.parseUnits(n.toString(), 'ether')
-}
+  return ethers.utils.parseUnits(n.toString(), "ether");
+};
 
-describe('Escrow', () => {
-
-})
+describe("Escrow", () => {
+  it("save the adresses");
+});
